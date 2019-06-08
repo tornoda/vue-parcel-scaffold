@@ -1,17 +1,17 @@
 <template>
-  <div>
-    hello world
-    <HelloWorld></HelloWorld>
-  </div>
+    <div>
+        <Home></Home>
+    </div>
 </template>
 
 <script>
-import Vue from "vue";
-import HelloWorld from "./components/Helloworld.vue";
-export default Vue.extend({
-  components: {
-    HelloWorld
-  }
-});
+    import Vue from "vue";
+    import Home from "./pages/Home";
+
+    export default Vue.extend({
+        components: {
+            Home
+        }
+    });
 </script>
 
