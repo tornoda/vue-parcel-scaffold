@@ -1,7 +1,7 @@
 import {getOnlineTodo} from "../api/home"
 
 const state = {
-    count: 0,
+    count: 1,
     onlineTodo: {
         userId: 0,
         id: 0,

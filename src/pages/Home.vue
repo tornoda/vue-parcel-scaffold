@@ -2,15 +2,28 @@
     <div>
         <div>{{count}}</div>
         <div>{{counterString}}</div>
-        <button @click="handleAddClick">点我加一</button>
-        <button @click="handleAsyncAddClick">点我一秒后加一</button>
+        <button @click="handleAddClick">点我加</button>
+        <button @click="handleAsyncAddClick">点我一秒后加</button>
         <div>
             <button @click="handleGetTodoClick">点我请求json</button>
         </div>
         <ul>
             <li v-for="(val, key) in onlineTodo">{{`${key} : ${val}`}}</li>
         </ul>
-        <fieldset>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <fieldset class="test-fix">
             <legend>
                 组件引入示例
             </legend>
@@ -23,19 +36,24 @@
 <script>
     import HelloWorld from "../components/Helloworld";
     import {mapActions, mapGetters, mapMutations, mapState} from "vuex";
+    import {useComponentGuards} from "../router/helper";
+    import homeGuard from '../router/in-components-guards/home'
 
-    export default {
+    const home = {
+
+        name: "home",
 
         components: {
             HelloWorld
         },
 
         data: () => ({
-            inputName: ""
+            inputName: "",
         }),
 
         computed: {
 
+            // state
             ...mapState({
                 count: state => state.home.count,
                 onlineTodo: state => state.home.onlineTodo
@@ -44,7 +62,7 @@
             // getter
             ...mapGetters({
                 counterString: "home/counterString"
-            })
+            }),
 
         },
 
@@ -72,7 +90,16 @@
 
         }
     };
+
+    export default useComponentGuards(home, homeGuard)
+
 </script>
 
 <style lang="scss" scoped>
+    .test-fix {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 </style>
