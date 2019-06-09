@@ -8,7 +8,6 @@ export default {
     },
 
     /**
-     * @example
      * 声明路由 "/:name"
      * 当"/home" 与 "/about"这样路径切换时，组件会进行复用
      * 此时钩子触发
