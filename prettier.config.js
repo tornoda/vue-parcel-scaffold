@@ -11,10 +11,10 @@ module.exports = {
     singleQuote: true,
     // 对象属性使用引号策略
     quoteProps: 'as-needed',
-    //
-    trailingComma: 'es5',
+    // 数组和对象及函数的最后一个成员不加','
+    trailingComma: 'none',
     // if true { demo } else {demo}
     bracketSpacing: true,
     // if 'avoid' [x => x.length] elseif ('always') [(x) => x.length]
-    arrowParens: 'avoid',
+    arrowParens: 'avoid'
 };
