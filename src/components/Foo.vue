@@ -1,20 +1,18 @@
 <template>
-  <div>
-    {{ test }}
-  </div>
+    <div>{{ test }}</div>
 </template>
 
 <script>
 export default {
-  name: "foo",
-  data: () => ({
-    test: "foo"
-  }),
-  methods: {
-    test() {
-      console.log("test");
-    }
-  }
+    name: 'foo',
+    data: () => ({
+        test: 'foo',
+    }),
+    methods: {
+        test() {
+            console.log('test');
+        },
+    },
 };
 </script>
 

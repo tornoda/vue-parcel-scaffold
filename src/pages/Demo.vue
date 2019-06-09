@@ -5,13 +5,13 @@
 </template>
 
 <script>
-    import HelloWorld from "../components/Helloworld"
+import HelloWorld from '../components/Helloworld';
 
-    export default {
-        name: "demo",
+export default {
+    name: 'demo',
 
-        components: {
-            HelloWorld
-        }
-    }
+    components: {
+        HelloWorld,
+    },
+};
 </script>
