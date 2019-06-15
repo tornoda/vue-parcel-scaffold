@@ -18,13 +18,13 @@
 
 1. 在`Home.vue`里
 
-```js
+```vue
 <script>
-    import useComponentGuards from '/src/router/helper.js'; const Home ={' '}
-    {
-        // Home component config
-    }
-    export default useComponentGuards(Home);
+import useComponentGuards from '/src/router/helper.js';
+
+export default useComponentGuards({
+    // Home component config
+});
 </script>
 ```
 
