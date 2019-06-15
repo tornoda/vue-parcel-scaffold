@@ -10,14 +10,18 @@ export default Vue.extend({
     props: {
         msg: {
             type: String,
-            default: 'world',
-        },
+            default: 'world'
+        }
     },
     methods: {
         handleMsgClick() {
             alert(this.msg);
-        },
-    },
+            /**
+             * 用于错误测试、演示
+             */
+            alert(test);
+        }
+    }
 });
 </script>
 

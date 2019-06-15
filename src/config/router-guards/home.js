@@ -1,9 +1,9 @@
 export default {
     beforeRouteEnter(to, from, next) {
         next(vm => {
-           /**
-            * 这里可以拿到this，即vm
-            */
+            /**
+             * 这里可以拿到this，即vm
+             */
         });
     },
 
@@ -13,19 +13,18 @@ export default {
      * 此时钩子触发
      */
     beforeRouteUpdate(to, from, next) {
-       /**
-        * 这里可以拿到this
-        * 做任何事情
-        */
+        /**
+         * 这里可以拿到this
+         * 做任何事情
+         */
         next();
     },
 
     beforeRouteLeave(to, from, next) {
-       /**
-        * 这里可以拿到this
-        * 做任何事情
-        */
+        /**
+         * 这里可以拿到this
+         * 做任何事情
+         */
         next();
-    },
-
+    }
 };

@@ -16,8 +16,14 @@ const afterEach = (to, from) => {
     // do some stuff
 };
 
-export default (router) => {
+/**
+ *
+ * @param {object} router router实例对象
+ */
+const useGlobalGuards = router => {
     router.beforeEach(beforeEach);
     router.beforeResolve(beforeResolve);
-    router.afterEach(afterEach)
-}
+    router.afterEach(afterEach);
+};
+
+export default useGlobalGuards;

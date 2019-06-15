@@ -8,9 +8,7 @@
             <button @click="handleGetTodoClick">点我请求json</button>
         </div>
         <ul>
-            <li v-for="(val, key) in onlineTodo" :key="val">
-                {{ `${key} : ${val}` }}
-            </li>
+            <li v-for="(val, key) in onlineTodo" :key="val">{{ `${key} : ${val}` }}</li>
         </ul>
         <br />
         <br />
@@ -38,30 +36,30 @@
 import HelloWorld from '../components/Helloworld';
 import { mapActions, mapGetters, mapMutations, mapState } from 'vuex';
 import { useComponentGuards } from '../router/helper';
-import homeGuard from '../router/in-components-guards/home';
+import homeGuard from '../config/router-guards/home';
 
 const home = {
     name: 'home',
 
     components: {
-        HelloWorld,
+        HelloWorld
     },
 
     data: () => ({
-        inputName: '',
+        inputName: ''
     }),
 
     computed: {
         // state
         ...mapState({
             count: state => state.home.count,
-            onlineTodo: state => state.home.onlineTodo,
+            onlineTodo: state => state.home.onlineTodo
         }),
 
         // getter
         ...mapGetters({
-            counterString: 'home/counterString',
-        }),
+            counterString: 'home/counterString'
+        })
     },
 
     methods: {
@@ -77,15 +75,15 @@ const home = {
 
         // 同步mutations
         ...mapMutations({
-            increase: 'home/increase',
+            increase: 'home/increase'
         }),
 
         // 异步actions
         ...mapActions({
             asyncIncrease: 'home/asyncIncrease',
-            getOnlineTodo: 'home/getOnlineTodo',
-        }),
-    },
+            getOnlineTodo: 'home/getOnlineTodo'
+        })
+    }
 };
 
 export default useComponentGuards(home, homeGuard);
